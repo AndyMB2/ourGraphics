@@ -2,7 +2,12 @@
 
 from graphics import *
 
-skyWin = GraphWin("SkyScraperScenery", 900, 900)
-skyWin.setCoords(0, 0, 1000, 1000)
+skyX = 800
+skyY = 800
 
+skyWin = GraphWin("SkyScraperScenery", skyX, skyY)
+skyWin.setCoords(0, 0, skyX, skyY)
 
+bgR=Rectangle(Point( 0,0 ), Point(skyX, skyY))
+bgR.setFill("skyblue")
+bgR.draw(skyWin) 
