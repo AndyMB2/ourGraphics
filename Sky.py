@@ -2,7 +2,7 @@
 
 from graphics import *
 
-def draw_towers():
+def draw_block():
     sC = Rectangle(Point(250, 0), Point(550, 700))
     sC.setFill("grey") 
     sC.draw(skyWin)
@@ -16,7 +16,5 @@ skyWin.setCoords(0, 0, skyX, skyY)
 bgR=Rectangle(Point( 0,0 ), Point(skyX, skyY))
 bgR.setFill("skyblue")
 bgR.draw(skyWin) 
-
-
 
 draw_towers()
