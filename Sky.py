@@ -2,10 +2,10 @@
 
 from graphics import *
 
-def draw_block():
-    sC = Rectangle(Point(250, 0), Point(550, 700))
-    sC.setFill("grey") 
-    sC.draw(skyWin)
+def draw_rect(rX, rY, rW, rH, rCol, rWin):
+    sC = Rectangle(Point(rX, rY), Point(rX + rW, rY + rH))
+    sC.setFill(rCol)
+    sC.draw(rWin)
 
 skyX = 800
 skyY = 800
@@ -13,8 +13,5 @@ skyY = 800
 skyWin = GraphWin("SkyScraperScenery", skyX, skyY)
 skyWin.setCoords(0, 0, skyX, skyY)
 
-bgR=Rectangle(Point( 0,0 ), Point(skyX, skyY))
-bgR.setFill("skyblue")
-bgR.draw(skyWin) 
-
-draw_towers()
+draw_rect(0, 0, skyX, skyY, "sky blue", skyWin) 
+draw_rect(250, 0, skyX / 3, 700, "grey", skyWin)
