@@ -13,5 +13,8 @@ skyY = 800
 skyWin = GraphWin("SkyScraperScenery", skyX, skyY)
 skyWin.setCoords(0, 0, skyX, skyY)
 
-draw_rect(0, 0, skyX, skyY, "sky blue", skyWin) 
-draw_rect(250, 0, skyX / 3, 700, "grey", skyWin)
+draw_rect(0, 0, skyX, skyY, "sky blue", skyWin) #Background
+
+draw_rect(250, 0, skyX / 3, 700, "grey", skyWin)#Tower
+draw_rect(258
+          , 550, skyX / 3.2, skyY / 7, "white", skyWin)
