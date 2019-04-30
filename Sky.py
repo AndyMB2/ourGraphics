@@ -23,5 +23,5 @@ bgR=Rectangle(Point( 0,0 ), Point(skySz, skySz))
 bgR.setFill("skyblue")
 bgR.draw(skyWin)
 
-for i in range (4):
+for i in range (6):
     draw_cloud(skySz, 600, 750, 20, "white")
