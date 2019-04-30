@@ -1,13 +1,27 @@
 #ourGraphics.py by Andy B & Fernando A
-
+from random import randint
 from graphics import *
 
-skyX = 800
-skyY = 800
+def draw_circle(cX, cY, radius, cColor):
+    circle = Circle(Point(cX, cY), radius)
+    circle.setFill(cColor)
+    circle.setOutline(cColor)
+    circle.draw(skyWin)
 
-skyWin = GraphWin("SkyScraperScenery", skyX, skyY)
-skyWin.setCoords(0, 0, skyX, skyY)
+def draw_cloud(maxX, minY, maxY, clRad, clColor):
+    clX = randint(0, maxX)
+    clY = randint(minY, maxY)
+    for i in range (10):
+        draw_circle(clX + randint(-50, 50), clY+ randint(-20, 20) , clRad , clColor)
 
-bgR=Rectangle(Point( 0,0 ), Point(skyX, skyY))
+skySz = 800
+
+skyWin = GraphWin("SkyScraperScenery", skySz, skySz)
+skyWin.setCoords(0, 0, skySz, skySz)
+
+bgR=Rectangle(Point( 0,0 ), Point(skySz, skySz))
 bgR.setFill("skyblue")
-bgR.draw(skyWin) 
+bgR.draw(skyWin)
+
+for i in range (6):
+    draw_cloud(skySz, 600, 750, 20, "white")
