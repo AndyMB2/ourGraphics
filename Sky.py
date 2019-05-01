@@ -15,6 +15,7 @@ skyWin.setCoords(0, 0, skyX, skyY)
 
 draw_rect(0, 0, skyX, skyY, "sky blue", skyWin) #Background
 
+#<<<<<<< HEAD
 gX = 258
 gH = 3.2
 gW = 7
