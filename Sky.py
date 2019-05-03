@@ -32,6 +32,10 @@ gH = 3.2
 gW = 7
 gCol = "white" 
 
+bgR=Rectangle(Point( 0,0 ), Point(skySz, skySz))
+bgR.setFill("skyblue")
+bgR.draw(skyWin)
+
 draw_rect(250, 0, skySz / 3, 700, "grey", skyWin)#Tower
 draw_rect(gX, 550, skySz / gH, skySz / gW, gCol, skyWin)#window
 draw_rect(gX, 420, skySz/ gH, skySz/ gW, gCol, skyWin)
@@ -40,9 +44,6 @@ draw_rect(gX, 160, skySz/ gH, skySz/ gW, gCol, skyWin)
 draw_rect(315, 0, skySz/ 6, skySz/ 5.3, "dark grey", skyWin)#door 
 draw_rect(410, 50, skySz/ 40, skySz/ 40, "black", skyWin)#door_nob
 
-bgR=Rectangle(Point( 0,0 ), Point(skySz, skySz))
-bgR.setFill("skyblue")
-bgR.draw(skyWin)
 
 for i in range (6):
-    draw_cloud(skySz, 600, 750, 20, "white")
+    draw_cloud(skySz, 700, 750, 20, "white")
